@@ -1,0 +1,16 @@
+var tupla;
+tupla = ['ciao', 15, true, 'qualsiasi', 34];
+console.log(tupla);
+tupla.push(38);
+console.log(tupla);
+tupla.pop();
+console.log(tupla);
+tupla.shift();
+console.log(tupla);
+var studenti;
+studenti = [['Gaetano', 'Quarto'], ['Francesca', 'Pozzi'], ['Flavio', 'Cirillo']];
+console.table(studenti);
+studenti.push(['Luca', 'Lattanzi']);
+console.table(studenti);
+studenti.shift();
+console.table(studenti);

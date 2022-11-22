@@ -44,6 +44,27 @@ var Docente = /** @class */ (function (_super) {
     };
     return Docente;
 }(Studente));
+var State = /** @class */ (function (_super) {
+    __extends(State, _super);
+    function State(_stato, _nazionalita, _nome, _cognome, id) {
+        var _this = _super.call(this, _nome, _cognome) || this;
+        _this.id = id;
+        _this.stato = _stato;
+        _this.nazionalita = _nazionalita;
+        return _this;
+    }
+    State.prototype.getAnno = function () {
+        return 1986;
+    };
+    State.prototype.setCognome = function (valore) {
+        this.cognome = valore;
+    };
+    return State;
+}(Studente));
+var newState = new State('Italia', 'Tedesca', 'Giuseppe', 'Verdi', 3);
+console.log(newState);
+newState.setCognome('Rossi');
+console.log(newState);
 var newDocente = new Docente(35, 'Aldo', 'Bianchi');
 console.log(newDocente.residenza());
 console.log(Docente.stato());

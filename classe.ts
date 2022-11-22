@@ -37,6 +37,31 @@ class Docente extends Studente {
     }
 }
 
+
+class State extends Studente {
+    stato!: string;
+    nazionalita!: string;
+    constructor(_stato: string, _nazionalita: string, _nome: string , _cognome: string, readonly id:number) {
+        super (_nome, _cognome);
+        this.stato = _stato;
+        this.nazionalita = _nazionalita;
+    }
+
+    getAnno(): number {
+        return 1986;
+    }
+    
+    setCognome(valore: string) {
+        this.cognome = valore;
+    }
+    
+}
+
+let newState = new State('Italia', 'Tedesca', 'Giuseppe', 'Verdi', 3);
+console.log(newState); 
+newState.setCognome('Rossi');
+console.log(newState); 
+
 let newDocente = new Docente(35, 'Aldo', 'Bianchi');
 console.log(newDocente.residenza());
 console.log(Docente.stato());
